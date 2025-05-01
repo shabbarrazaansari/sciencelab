@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the research areas at ScienceLab Research Institute, including Biotechnology, Materials Science, Environmental Science, and Computational Science." />
+  <meta name="keywords" content="Science Lab, Research Areas, Biotechnology, Materials Science, Environmental Science, Computational Science, Tailwind CSS" />
+  <meta name="author" content="ScienceLab" />
+  <title>Research Areas - ScienceLab Research Institute</title>
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'sci-navy': '#0A174E',
+            'sci-green': '#10B981',
+            'sci-light-gray': '#F3F6FA',
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          boxShadow: {
+            'nav': '0 4px 24px 0 rgba(10,23,78,0.10)',
+            'form': '0 8px 32px 0 rgba(10,23,78,0.10)',
+            'card': '0 4px 24px 0 rgba(10,23,78,0.08)',
+            'card-hover': '0 8px 32px 0 rgba(16,185,129,0.18)',
+            'icon': '0 2px 8px 0 rgba(16,185,129,0.10)',
+            'img': '0 2px 8px 0 rgba(16,185,129,0.10)',
+            'pub-hover': '0 6px 24px 0 rgba(16,185,129,0.18)',
+          },
+          animation: {
+            'fade-in': 'fade-in 0.8s cubic-bezier(.4,0,.2,1) both',
+            'fade-in-left': 'fade-in-left 0.8s cubic-bezier(.4,0,.2,1) both',
+            'fade-in-right': 'fade-in-right 0.8s cubic-bezier(.4,0,.2,1) both',
+          },
+          keyframes: {
+            'fade-in': {
+              'from': { opacity: '0', transform: 'translateY(20px)' },
+              'to': { opacity: '1', transform: 'translateY(0)' },
+            },
+            'fade-in-left': {
+              'from': { opacity: '0', transform: 'translateX(-20px)' },
+              'to': { opacity: '1', transform: 'translateX(0)' },
+            },
+            'fade-in-right': {
+              'from': { opacity: '0', transform: 'translateX(20px)' },
+              'to': { opacity: '1', transform: 'translateX(0)' },
+            },
+          },
+          backgroundImage: {
+             'hero-pattern': "linear-gradient(rgba(10,23,78,0.85),rgba(16,185,129,0.25)), url('https://images.unsplash.com/photo-1559757175-5700dde67548?auto=format&fit=crop&w=1200&q=80')",
+          }
+        },
+      },
+      plugins: [],
+    }
+  </script>
+  <!-- Favicon -->
+  <link rel="icon" href="https://img.icons8.com/ios-filled/50/10B981/laboratory.png" />
+  <!-- Basic Focus Styling (Tailwind's focus-visible handles most) -->
+  <style type="text/tailwindcss">
+    @layer base {
+      html {
+        @apply scroll-smooth;
+      }
+      body {
+        @apply font-poppins text-sci-navy bg-gradient-to-br from-slate-800 to-slate-200;
+      }
+      *:focus-visible {
+          @apply outline outline-2 outline-offset-2 outline-sci-green;
+      }
+      @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+        .glass-fallback {
+          @apply bg-sci-light-gray/95;
+        }
+        .form-glass-fallback {
+           @apply bg-sci-light-gray/90;
+        }
+      }
+    }
+    @layer components {
+      .nav-link {
+        @apply font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200 relative pb-1;
+      }
+      .nav-link::after {
+        content: '';
+        @apply absolute bottom-0 left-0 w-0 h-0.5 bg-sci-green transition-all duration-300;
+      }
+      .nav-link:hover::after, .nav-link:focus::after {
+         @apply w-full;
+      }
+      .nav-link-mobile {
+        @apply block py-2 font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200;
+      }
+      .btn-primary {
+        @apply inline-block bg-sci-green text-white px-6 py-2.5 rounded-full shadow-lg font-semibold hover:bg-sci-navy hover:text-sci-green focus:bg-sci-navy focus:text-sci-green focus:outline-none focus:ring-2 focus:ring-sci-green focus:ring-offset-2 transition-all duration-200 ease-in-out transform hover:scale-105;
+      }
+      .section-title {
+        @apply text-3xl md:text-4xl font-bold mb-10 md:mb-12 text-center text-sci-navy;
+      }
+      .card-base {
+        @apply bg-sci-light-gray/80 backdrop-blur-sm rounded-2xl shadow-card p-6 transition-all duration-300 ease-in-out;
+      }
+      .card-hover {
+        @apply hover:shadow-card-hover hover:scale-[1.03] focus-within:shadow-card-hover focus-within:scale-[1.03] hover:z-10 focus-within:z-10;
+      }
+      .form-input {
+        @apply w-full py-2.5 px-4 rounded-lg border border-slate-300 bg-white/90 text-sci-navy placeholder-slate-500 text-base transition duration-200 focus:outline-none focus:border-sci-green focus:ring-1 focus:ring-sci-green;
+      }
+      .form-label {
+        @apply block mb-1.5 font-medium text-sci-navy;
+      }
+      .form-error {
+        @apply text-red-500 text-sm min-h-[1.2em] block mt-1;
+      }
+      .social-icon {
+         @apply inline-flex items-center text-sci-green hover:text-sci-navy focus:text-sci-navy transition-colors duration-200 transform hover:scale-110;
+      }
+       .footer-social-icon {
+         @apply inline-flex items-center text-white hover:text-sci-green focus:text-sci-green transition-colors duration-200 transform hover:scale-110;
+      }
+      .footer-link {
+        @apply font-semibold text-white hover:text-sci-green focus:text-sci-green hover:underline focus:underline transition-colors duration-200;
+      }
+    }
+  </style>
+</head>
+<!-- Change this line -->
+<body class="min-h-screen flex flex-col font-poppins text-sci-navy bg-gradient-to-br from-slate-100 to-sci-light-gray">
+<!-- To this -->
+<body class="min-h-screen flex flex-col font-poppins text-sci-navy bg-gradient-to-br from-slate-100 to-sci-light-gray">
+
+  <!-- Navbar -->
+  <header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white/20 backdrop-blur-md border-b border-sci-navy/10 shadow-nav transition-all duration-300 glass-fallback">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
+      <a href="index.html" class="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-sci-green rounded">
+        <img src="https://img.icons8.com/ios-filled/50/10B981/laboratory.png" alt="Lab Logo" class="h-8 w-8" />
+        <span class="font-bold text-xl text-sci-green">ScienceLab</span>
+      </a>
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="research.html" class="nav-link">Research</a></li>
+        <li><a href="team.html" class="nav-link">Team</a></li>
+        <li><a href="publications.html" class="nav-link">Publications</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="hidden md:inline-block btn-primary px-5 py-2">Get in Touch</a>
+      <!-- Hamburger -->
+      <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 focus:outline-none p-2 -mr-2" aria-label="Open navigation menu" aria-expanded="false">
+        <span class="w-6 h-0.5 bg-sci-green rounded-full"></span>
+        <span class="w-6 h-0.5 bg-sci-green rounded-full"></span>
+        <span class="w-6 h-0.5 bg-sci-green rounded-full"></span>
+      </button>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white/80 backdrop-blur-lg shadow-2xl border-l border-white/20 z-[60] transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col p-6 gap-4 md:hidden">
+       <div class="flex justify-between items-center mb-4">
+           <span class="font-bold text-lg text-sci-green">Menu</span>
+           <button id="close-menu" class="text-3xl text-sci-green hover:text-sci-navy focus:text-sci-navy focus:outline-none" aria-label="Close navigation menu">&times;</button>
+       </div>
+      <a href="index.html" class="nav-link-mobile">Home</a>
+      <a href="about.html" class="nav-link-mobile">About</a>
+      <a href="research.html" class="nav-link-mobile">Research</a>
+      <a href="team.html" class="nav-link-mobile">Team</a>
+      <a href="publications.html" class="nav-link-mobile">Publications</a>
+      <a href="contact.html" class="nav-link-mobile">Contact</a>
+      <a href="contact.html" class="btn-primary w-full text-center mt-4">Get in Touch</a>
+    </div>
+     <!-- Mobile Menu Overlay -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/30 z-40 hidden md:hidden transition-opacity duration-300 ease-in-out"></div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Research Areas Section -->
+    <section id="research" class="py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <h2 class="section-title">Research Areas</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Card 1 -->
+          <div class="card-base card-hover text-center group">
+            <div class="mx-auto mb-5 w-16 h-16 rounded-full bg-gradient-to-br from-sci-navy to-sci-green flex items-center justify-center shadow-icon">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.341A8 8 0 1 1 12 4v8l7.428 3.341z"/></svg>
+            </div>
+            <h3 class="font-semibold text-xl mb-2 text-sci-navy">Biotechnology</h3>
+            <p class="text-sci-navy/80 text-sm leading-relaxed">Cutting-edge research in genetics, molecular biology, and bioengineering applications.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="card-base card-hover text-center group">
+             <div class="mx-auto mb-5 w-16 h-16 rounded-full bg-gradient-to-br from-sci-navy to-sci-green flex items-center justify-center shadow-icon">
+               <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"/></svg>
+            </div>
+            <h3 class="font-semibold text-xl mb-2 text-sci-navy">Materials Science</h3>
+            <p class="text-sci-navy/80 text-sm leading-relaxed">Innovating advanced materials for energy storage, electronics, and healthcare solutions.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="card-base card-hover text-center group">
+             <div class="mx-auto mb-5 w-16 h-16 rounded-full bg-gradient-to-br from-sci-navy to-sci-green flex items-center justify-center shadow-icon">
+               <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-6.364-.386l1.591-1.591M3 12h2.25m.386-6.364l1.591 1.591M12 12a6 6 0 100-12 6 6 0 000 12z"/></svg>
+            </div>
+            <h3 class="font-semibold text-xl mb-2 text-sci-navy">Environmental Science</h3>
+            <p class="text-sci-navy/80 text-sm leading-relaxed">Developing sustainable solutions for climate change, water resources, and ecosystem health.</p>
+          </div>
+          <!-- Card 4 -->
+          <div class="card-base card-hover text-center group">
+             <div class="mx-auto mb-5 w-16 h-16 rounded-full bg-gradient-to-br from-sci-navy to-sci-green flex items-center justify-center shadow-icon">
+               <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"/></svg>
+            </div>
+            <h3 class="font-semibold text-xl mb-2 text-sci-navy">Computational Science</h3>
+            <p class="text-sci-navy/80 text-sm leading-relaxed">Utilizing modeling, simulation, and AI/ML for accelerated scientific discovery.</p>
+          </div>
+        </div>
+        <!-- Add more relevant content for the Research page here if needed -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-sci-navy text-white py-10 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center text-center md:text-left">
+          <!-- Logo & Info -->
+          <div class="lg:col-span-2">
+            <div class="flex items-center justify-center md:justify-start gap-2 mb-3">
+              <img src="https://img.icons8.com/ios-filled/50/10B981/laboratory.png" alt="Lab Logo" class="h-7 w-7" />
+              <span class="font-bold text-xl">ScienceLab</span>
+            </div>
+            <p class="text-sm text-slate-300">123 Science Avenue, Innovation City, IC 12345</p>
+            <p class="text-sm text-slate-300">info@sciencelab.org | +1 (234) 567-890</p>
+          </div>
+
+          <!-- Footer Links -->
+          <div class="flex flex-col items-center md:items-start gap-2">
+             <h4 class="font-semibold text-lg mb-2">Quick Links</h4>
+            <a href="about.html" class="footer-link">About</a>
+            <a href="research.html" class="footer-link">Research</a>
+            <a href="team.html" class="footer-link">Team</a>
+            <a href="publications.html" class="footer-link">Publications</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="flex flex-col items-center md:items-start gap-2">
+             <h4 class="font-semibold text-lg mb-2">Newsletter</h4>
+             <form class="flex w-full max-w-sm" autocomplete="off">
+               <label for="footer-email" class="sr-only">Newsletter email</label>
+               <input type="email" id="footer-email" placeholder="Your email" class="flex-grow px-3 py-2 rounded-l-md text-sci-navy focus:outline-none focus:ring-2 focus:ring-sci-green" aria-label="Newsletter email" />
+               <button type="submit" class="bg-sci-green px-4 py-2 rounded-r-md font-semibold hover:bg-opacity-80 transition-colors text-white focus:outline-none focus:ring-2 focus:ring-sci-green focus:ring-offset-2 focus:ring-offset-sci-navy">Subscribe</button>
+             </form>
+          </div>
+       </div>
+
+       <!-- Bottom Bar -->
+       <div class="border-t border-slate-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+          <p class="text-slate-400">&copy; 2025 ScienceLab Research Institute. All rights reserved.</p>
+          <div class="flex gap-4">
+            <a href="#" aria-label="Twitter" class="footer-social-icon">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.59-2.47.7a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04A4.28 4.28 0 0 0 16.11 4c-2.37 0-4.29 1.92-4.29 4.29 0 .34.04.67.11.99C7.69 9.13 4.07 7.38 1.64 4.7c-.37.64-.58 1.38-.58 2.17 0 1.5.76 2.82 1.92 3.6a4.28 4.28 0 0 1-1.94-.54v.05c0 2.1 1.5 3.85 3.5 4.25-.36.1-.74.16-1.13.16-.28 0-.54-.03-.8-.08.54 1.7 2.1 2.94 3.95 2.97A8.6 8.6 0 0 1 2 19.54a12.13 12.13 0 0 0 6.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.37-.01-.56A8.7 8.7 0 0 0 24 4.59a8.5 8.5 0 0 1-2.54.7z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="footer-social-icon">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.88v1.36h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v5.59z"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="footer-social-icon">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.325v21.351c0 .732.592 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.672c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.322-.592 1.322-1.324v-21.35c0-.733-.592-1.325-1.325-1.325z"/></svg>
+            </a>
+          </div>
+       </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Mobile Menu -->
+  <script src="script.js"></script>
+</body>
+</html>
