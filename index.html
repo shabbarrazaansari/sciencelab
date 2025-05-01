@@ -228,6 +228,8 @@
 
   </main>
 
+  
+  
   <!-- Footer -->
   <footer class="bg-sci-navy text-white py-10 mt-auto">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
@@ -245,11 +247,11 @@
           <!-- Footer Links -->
           <div class="flex flex-col items-center md:items-start gap-2">
              <h4 class="font-semibold text-lg mb-2">Quick Links</h4>
-            <a href="about.html" class="font-semibold text-white hover:text-sci-green focus:text-sci-green hover:underline focus:underline transition-colors duration-200 focus:outline-none">About</a>
-            <a href="research.html" class="font-semibold text-white hover:text-sci-green focus:text-sci-green hover:underline focus:underline transition-colors duration-200 focus:outline-none">Research</a>
-            <a href="team.html" class="font-semibold text-white hover:text-sci-green focus:text-sci-green hover:underline focus:underline transition-colors duration-200 focus:outline-none">Team</a>
-            <a href="publications.html" class="font-semibold text-white hover:text-sci-green focus:text-sci-green hover:underline focus:underline transition-colors duration-200 focus:outline-none">Publications</a>
-            <a href="contact.html" class="font-semibold text-white hover:text-sci-green focus:text-sci-green hover:underline focus:underline transition-colors duration-200 focus:outline-none">Contact</a>
+            <a href="about.html" class="footer-link">About</a>
+            <a href="research.html" class="footer-link">Research</a>
+            <a href="team.html" class="footer-link">Team</a>
+            <a href="publications.html" class="footer-link">Publications</a>
+            <a href="contact.html" class="footer-link">Contact</a>
           </div>
 
           <!-- Newsletter -->
@@ -257,7 +259,7 @@
              <h4 class="font-semibold text-lg mb-2">Newsletter</h4>
              <form class="flex w-full max-w-sm" autocomplete="off">
                <label for="footer-email" class="sr-only">Newsletter email</label>
-               <input type="email" id="footer-email" placeholder="Your email" class="flex-grow px-3 py-2 rounded-l-md text-sci-navy focus:outline-none focus:ring-2 focus:ring-sci-green" aria-label="Newsletter email" required />
+               <input type="email" id="footer-email" placeholder="Your email" class="flex-grow px-3 py-2 rounded-l-md text-sci-navy focus:outline-none focus:ring-2 focus:ring-sci-green" aria-label="Newsletter email" />
                <button type="submit" class="bg-sci-green px-4 py-2 rounded-r-md font-semibold hover:bg-opacity-80 transition-colors text-white focus:outline-none focus:ring-2 focus:ring-sci-green focus:ring-offset-2 focus:ring-offset-sci-navy">Subscribe</button>
              </form>
           </div>
@@ -267,112 +269,22 @@
        <div class="border-t border-slate-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
           <p class="text-slate-400">&copy; 2025 ScienceLab Research Institute. All rights reserved.</p>
           <div class="flex gap-4">
-            <a href="#" aria-label="Twitter" class="inline-flex items-center text-white hover:text-sci-green focus:text-sci-green transition-colors duration-200 transform hover:scale-110 focus:outline-none focus-visible:ring-1 focus-visible:ring-sci-green rounded">
+            <a href="#" aria-label="Twitter" class="footer-social-icon">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.59-2.47.7a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04A4.28 4.28 0 0 0 16.11 4c-2.37 0-4.29 1.92-4.29 4.29 0 .34.04.67.11.99C7.69 9.13 4.07 7.38 1.64 4.7c-.37.64-.58 1.38-.58 2.17 0 1.5.76 2.82 1.92 3.6a4.28 4.28 0 0 1-1.94-.54v.05c0 2.1 1.5 3.85 3.5 4.25-.36.1-.74.16-1.13.16-.28 0-.54-.03-.8-.08.54 1.7 2.1 2.94 3.95 2.97A8.6 8.6 0 0 1 2 19.54a12.13 12.13 0 0 0 6.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.37-.01-.56A8.7 8.7 0 0 0 24 4.59a8.5 8.5 0 0 1-2.54.7z"/></svg>
             </a>
-            <a href="#" aria-label="LinkedIn" class="inline-flex items-center text-white hover:text-sci-green focus:text-sci-green transition-colors duration-200 transform hover:scale-110 focus:outline-none focus-visible:ring-1 focus-visible:ring-sci-green rounded">
-      <a href="contact.html" class="block py-2 font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200">Contact</a>
-      <a href="contact.html" class="inline-block bg-sci-green text-white px-6 py-2.5 rounded-full shadow-lg font-semibold hover:bg-sci-navy hover:text-sci-green focus:bg-sci-navy focus:text-sci-green focus:outline-none focus:ring-2 focus:ring-sci-green focus:ring-offset-2 transition-all duration-200 ease-in-out transform hover:scale-105 w-full text-center mt-4">Get in Touch</a>
-    </div>
-     <!-- Mobile Menu Overlay -->
-    <div id="menu-overlay" class="fixed inset-0 bg-black/30 z-40 hidden md:hidden transition-opacity duration-300 ease-in-out"></div>
-  </header>
-
-  <main class="flex-grow">
-    <!-- Hero Section -->
-    <section id="home" class="pt-28 md:pt-36 pb-20 md:pb-24 bg-hero-pattern bg-cover bg-center relative text-white">
-      <div class="absolute inset-0 bg-sci-navy/70"></div> <!-- Darker overlay for better text contrast -->
-      <div class="max-w-4xl mx-auto text-center relative z-10 px-4">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg animate-fade-in">Pioneering Science for a Better Tomorrow</h1>
-        <p class="text-lg md:text-xl mb-8 font-medium animate-fade-in [animation-delay:0.2s]">Innovative research, world-class team, and a passion for discovery.</p>
-        <a href="about.html" class="inline-block bg-sci-green text-white px-6 py-2.5 rounded-full shadow-lg font-semibold hover:bg-sci-navy hover:text-sci-green focus:bg-sci-navy focus:text-sci-green focus:outline-none focus:ring-2 focus:ring-sci-green focus:ring-offset-2 transition-all duration-200 ease-in-out transform hover:scale-105 text-lg animate-fade-in [animation-delay:0.4s]">Learn More</a>
-      </div>
-    </section>
-
-    <!-- Featured Research Section (Placeholder) -->
-    <section id="featured-research" class="py-16 md:py-20 bg-sci-light-gray">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-10 md:mb-12 text-center text-sci-navy">Featured Research</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-[0_4px_24px_0_rgba(10,23,78,0.08)] p-6 transition-all duration-300 ease-in-out hover:shadow-[0_8px_32px_0_rgba(16,185,129,0.18)] hover:scale-[1.03] focus-within:shadow-[0_8px_32px_0_rgba(16,185,129,0.18)] focus-within:scale-[1.03] hover:z-10 focus-within:z-10 flex flex-col animate-fade-in">
-                    <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=400&q=80" alt="Research Image 1" class="rounded-lg mb-4 h-40 w-full object-cover shadow-img">
-                    <h3 class="text-xl font-semibold text-sci-navy mb-2">Quantum Entanglement Studies</h3>
-                    <p class="text-slate-600 text-sm mb-4 flex-grow">Exploring the fundamental properties of quantum entanglement and its potential applications in computing and communication.</p>
-                    <a href="research.html#quantum" class="mt-auto text-sci-green font-semibold hover:underline focus:underline focus:outline-none">Read More &rarr;</a>
-                </div>
-                <!-- Card 2 -->
-                <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-[0_4px_24px_0_rgba(10,23,78,0.08)] p-6 transition-all duration-300 ease-in-out hover:shadow-[0_8px_32px_0_rgba(16,185,129,0.18)] hover:scale-[1.03] focus-within:shadow-[0_8px_32px_0_rgba(16,185,129,0.18)] focus-within:scale-[1.03] hover:z-10 focus-within:z-10 flex flex-col animate-fade-in [animation-delay:0.1s]">
-                    <img src="https://images.unsplash.com/photo-1576319155264-99536e0be0b5?auto=format&fit=crop&w=400&q=80" alt="Research Image 2" class="rounded-lg mb-4 h-40 w-full object-cover shadow-img">
-                    <h3 class="text-xl font-semibold text-sci-navy mb-2">Advanced Materials Synthesis</h3>
-                    <p class="text-slate-600 text-sm mb-4 flex-grow">Developing novel materials with enhanced properties for energy storage, catalysis, and biomedical applications.</p>
-                    <a href="research.html#materials" class="mt-auto text-sci-green font-semibold hover:underline focus:underline focus:outline-none">Read More &rarr;</a>
-                </div>
-                <!-- Card 3 -->
-                <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-[0_4px_24px_0_rgba(10,23,78,0.08)] p-6 transition-all duration-300 ease-in-out hover:shadow-[0_8px_32px_0_rgba(16,185,129,0.18)] hover:scale-[1.03] focus-within:shadow-[0_8px_32px_0_rgba(16,185,129,0.18)] focus-within:scale-[1.03] hover:z-10 focus-within:z-10 flex flex-col animate-fade-in [animation-delay:0.2s]">
-                    <img src="https://images.unsplash.com/photo-1581093450021-916089041f6e?auto=format&fit=crop&w=400&q=80" alt="Research Image 3" class="rounded-lg mb-4 h-40 w-full object-cover shadow-img">
-                    <h3 class="text-xl font-semibold text-sci-navy mb-2">Computational Biology Models</h3>
-                    <p class="text-slate-600 text-sm mb-4 flex-grow">Creating sophisticated computational models to simulate complex biological systems and accelerate drug discovery.</p>
-                    <a href="research.html#compbio" class="mt-auto text-sci-green font-semibold hover:underline focus:underline focus:outline-none">Read More &rarr;</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-sci-navy text-white py-10 mt-auto">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center text-center md:text-left">
-          <!-- Logo & Info -->
-          <div class="lg:col-span-2">
-            <div class="flex items-center justify-center md:justify-start gap-2 mb-3">
-              <img src="https://img.icons8.com/ios-filled/50/10B981/laboratory.png" alt="Lab Logo" class="h-7 w-7" />
-              <span class="font-bold text-xl">ScienceLab</span>
-            </div>
-            <p class="text-sm text-slate-300">123 Science Avenue, Innovation City, IC 12345</p>
-            <p class="text-sm text-slate-300">info@sciencelab.org | +1 (234) 567-890</p>
-          </div>
-
-          <!-- Footer Links -->
-          <div class="flex flex-col items-center md:items-start gap-2">
-             <h4 class="font-semibold text-lg mb-2">Quick Links</h4>
-            <a href="about.html" class="font-semibold text-white hover:text-sci-green focus:text-sci-green hover:underline focus:underline transition-colors duration-200 focus:outline-none">About</a>
-            <a href="research.html" class="font-semibold text-white hover:text-sci-green focus:text-sci-green hover:underline focus:underline transition-colors duration-200 focus:outline-none">Research</a>
-            <a href="team.html" class="font-semibold text-white hover:text-sci-green focus:text-sci-green hover:underline focus:underline transition-colors duration-200 focus:outline-none">Team</a>
-            <a href="publications.html" class="font-semibold text-white hover:text-sci-green focus:text-sci-green hover:underline focus:underline transition-colors duration-200 focus:outline-none">Publications</a>
-            <a href="contact.html" class="font-semibold text-white hover:text-sci-green focus:text-sci-green hover:underline focus:underline transition-colors duration-200 focus:outline-none">Contact</a>
-          </div>
-
-          <!-- Newsletter -->
-          <div class="flex flex-col items-center md:items-start gap-2">
-             <h4 class="font-semibold text-lg mb-2">Newsletter</h4>
-             <form class="flex w-full max-w-sm" autocomplete="off">
-               <label for="footer-email" class="sr-only">Newsletter email</label>
-               <input type="email" id="footer-email" placeholder="Your email" class="flex-grow px-3 py-2 rounded-l-md text-sci-navy focus:outline-none focus:ring-2 focus:ring-sci-green" aria-label="Newsletter email" required />
-               <button type="submit" class="bg-sci-green px-4 py-2 rounded-r-md font-semibold hover:bg-opacity-80 transition-colors text-white focus:outline-none focus:ring-2 focus:ring-sci-green focus:ring-offset-2 focus:ring-offset-sci-navy">Subscribe</button>
-             </form>
-          </div>
-       </div>
-
-       <!-- Bottom Bar -->
-       <div class="border-t border-slate-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p class="text-slate-400">&copy; 2025 ScienceLab Research Institute. All rights reserved.</p>
-          <div class="flex gap-4">
-            <a href="#" aria-label="Twitter" class="inline-flex items-center text-white hover:text-sci-green focus:text-sci-green transition-colors duration-200 transform hover:scale-110 focus:outline-none focus-visible:ring-1 focus-visible:ring-sci-green rounded">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.59-2.47.7a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04A4.28 4.28 0 0 0 16.11 4c-2.37 0-4.29 1.92-4.29 4.29 0 .34.04.67.11.99C7.69 9.13 4.07 7.38 1.64 4.7c-.37.64-.58 1.38-.58 2.17 0 1.5.76 2.82 1.92 3.6a4.28 4.28 0 0 1-1.94-.54v.05c0 2.1 1.5 3.85 3.5 4.25-.36.1-.74.16-1.13.16-.28 0-.54-.03-.8-.08.54 1.7 2.1 2.94 3.95 2.97A8.6 8.6 0 0 1 2 19.54a12.13 12.13 0 0 0 6.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.37-.01-.56A8.7 8.7 0 0 0 24 4.59a8.5 8.5 0 0 1-2.54.7z"/></svg>
-            </a>
-            <a href="#" aria-label="LinkedIn" class="inline-flex items-center text-white hover:text-sci-green focus:text-sci-green transition-colors duration-200 transform hover:scale-110 focus:outline-none focus-visible:ring-1 focus-visible:ring-sci-green rounded">
+            <a href="#" aria-label="LinkedIn" class="footer-social-icon">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.88v1.36h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v5.59z"/></svg>
             </a>
-            <a href="#" aria-label="Facebook" class="inline-flex items-center text-white hover:text-sci-green focus:text-sci-green transition-colors duration-200 transform hover:scale-110 focus:outline-none focus-visible:ring-1 focus-visible:ring-sci-green rounded">
+            <a href="#" aria-label="Facebook" class="footer-social-icon">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.325v21.351c0 .732.592 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.672c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.322-.592 1.322-1.324v-21.35c0-.733-.592-1.325-1.325-1.325z"/></svg>
             </a>
           </div>
        </div>
     </div>
   </footer>
+
+  <!-- Footer -->
+  
 
   <!-- JavaScript for Mobile Menu -->
   <script src="script.js"></script>
