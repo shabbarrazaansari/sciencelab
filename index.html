@@ -173,18 +173,20 @@
       </div>
     </nav>
     <!-- Mobile Menu (with stronger glassmorphism) -->
-    <div id="mobile-menu" class="fixed top-0 left-0 right-0 h-[70vh] w-full bg-white/70 backdrop-blur-2xl shadow-2xl border border-white/30 z-[60] transform -translate-y-full transition-transform duration-300 ease-in-out flex flex-col p-6 gap-4 md:hidden before:absolute before:inset-0 before:bg-gradient-to-b before:from-white/80 before:to-white/60 before:-z-10">
-      <div class="flex justify-between items-center mb-4 relative">
+    <div id="mobile-menu" class="fixed top-0 left-0 right-0 h-[50vh] w-full bg-white/70 backdrop-blur-2xl shadow-2xl border border-white/30 z-[60] transform -translate-y-[120%] transition-transform duration-300 ease-in-out flex flex-col p-6 pb-8 gap-3 md:hidden before:absolute before:inset-0 before:bg-gradient-to-b before:from-white/80 before:to-white/60 before:-z-10">
+      <div class="flex justify-between items-center mb-2 relative">
         <span class="font-bold text-lg text-sci-navy">Menu</span>
         <button id="close-menu" class="text-3xl text-sci-navy hover:text-sci-green focus:text-sci-green focus:outline-none focus-visible:ring-2 focus-visible:ring-sci-green rounded" aria-label="Close navigation menu">&times;</button>
       </div>
-      <a href="index.html" class="block py-2 font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200">Home</a>
-      <a href="about.html" class="block py-2 font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200">About</a>
-      <a href="research.html" class="block py-2 font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200">Research</a>
-      <a href="team.html" class="block py-2 font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200">Team</a>
-      <a href="publications.html" class="block py-2 font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200">Publications</a>
-      <a href="contact.html" class="block py-2 font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200">Contact</a>
-      <a href="contact.html" class="inline-block bg-sci-green text-white px-6 py-2.5 rounded-full shadow-lg font-semibold hover:bg-sci-navy hover:text-sci-green focus:bg-sci-navy focus:text-sci-green focus:outline-none focus:ring-2 focus:ring-sci-green focus:ring-offset-2 transition-all duration-200 ease-in-out transform hover:scale-105 w-full text-center mt-4">Get in Touch</a>
+      <div class="flex flex-col gap-2 flex-grow">
+        <a href="index.html" class="block py-2 font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200">Home</a>
+        <a href="about.html" class="block py-2 font-semibold text-sci-green">About</a>
+        <a href="research.html" class="block py-2 font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200">Research</a>
+        <a href="team.html" class="block py-2 font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200">Team</a>
+        <a href="publications.html" class="block py-2 font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200">Publications</a>
+        <a href="contact.html" class="block py-2 font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200">Contact</a>
+      </div>
+      <a href="contact.html" class="inline-block bg-sci-green text-white px-6 py-2.5 rounded-full shadow-lg font-semibold hover:bg-sci-navy hover:text-sci-green focus:bg-sci-navy focus:text-sci-green focus:outline-none focus:ring-2 focus:ring-sci-green focus:ring-offset-2 transition-all duration-200 ease-in-out transform hover:scale-105 w-full text-center">Get in Touch</a>
     </div>
 
     <!-- Mobile Menu Overlay (increased blur and opacity) -->

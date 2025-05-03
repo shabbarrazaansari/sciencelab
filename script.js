@@ -6,6 +6,6 @@ document.getElementById('menu-btn').addEventListener('click', () => {
 
 document.getElementById('close-menu').addEventListener('click', () => {
     const mobileMenu = document.getElementById('mobile-menu');
-    mobileMenu.style.transform = 'translateY(-100%)';  // Closes the menu to top
+    mobileMenu.style.transform = 'translateY(-120%)';  // Closes the menu to top
     document.getElementById('menu-overlay').classList.add('hidden');
 });
