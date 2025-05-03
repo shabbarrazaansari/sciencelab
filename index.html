@@ -145,22 +145,24 @@
 
   <!-- Navbar -->
   <header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-sci-navy/10 shadow-[0_4px_24px_0_rgba(10,23,78,0.10)] transition-all duration-300">
-    <nav class="max-w-7xl mx-auto flex items-center gap-6 px-4 sm:px-6 py-3">
-      <!-- Hamburger -->
-      <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 focus:outline-none p-2 -ml-2 focus-visible:ring-2 focus-visible:ring-sci-green rounded" aria-label="Open navigation menu" aria-expanded="false">
-        <span class="w-6 h-0.5 bg-sci-green rounded-full"></span>
-        <span class="w-6 h-0.5 bg-sci-green rounded-full"></span>
-        <span class="w-6 h-0.5 bg-sci-green rounded-full"></span>
-      </button>
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
+      <div class="flex items-center gap-6">
+        <!-- Hamburger -->
+        <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 focus:outline-none p-2 -ml-2 focus-visible:ring-2 focus-visible:ring-sci-green rounded" aria-label="Open navigation menu" aria-expanded="false">
+          <span class="w-6 h-0.5 bg-sci-green rounded-full"></span>
+          <span class="w-6 h-0.5 bg-sci-green rounded-full"></span>
+          <span class="w-6 h-0.5 bg-sci-green rounded-full"></span>
+        </button>
 
-      <!-- Logo -->
-      <a href="index.html" class="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-sci-green rounded">
-        <img src="https://img.icons8.com/ios-filled/50/10B981/laboratory.png" alt="Lab Logo" class="h-8 w-8" />
-        <span class="font-bold text-xl text-sci-green">ScienceLab</span>
-      </a>
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-sci-green rounded">
+          <img src="https://img.icons8.com/ios-filled/50/10B981/laboratory.png" alt="Lab Logo" class="h-8 w-8" />
+          <span class="font-bold text-xl text-sci-green">ScienceLab</span>
+        </a>
+      </div>
 
       <!-- Desktop Menu -->
-      <div class="hidden md:flex items-center gap-6">
+      <div class="hidden md:flex items-center gap-6 ml-auto">
         <a href="index.html" class="font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-sci-green after:transition-all after:duration-300 hover:after:w-full focus:after:w-full">Home</a>
         <a href="about.html" class="font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-sci-green after:transition-all after:duration-300 hover:after:w-full focus:after:w-full">About</a>
         <a href="research.html" class="font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-sci-green after:transition-all after:duration-300 hover:after:w-full focus:after:w-full">Research</a>
@@ -170,11 +172,11 @@
         <a href="contact.html" class="bg-sci-green text-white px-5 py-2 rounded-full shadow-lg font-semibold hover:bg-sci-navy hover:text-sci-green focus:bg-sci-navy focus:text-sci-green focus:outline-none focus:ring-2 focus:ring-sci-green focus:ring-offset-2 transition-all duration-200 ease-in-out transform hover:scale-105">Get in Touch</a>
       </div>
     </nav>
-    <!-- Mobile Menu (modified for left side) -->
-    <div id="mobile-menu" class="fixed top-0 left-0 h-full w-64 bg-white/90 backdrop-blur-2xl shadow-2xl border-r border-white/20 z-[60] transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col p-6 gap-4 md:hidden">
-      <div class="flex justify-between items-center mb-4">
-        <span class="font-bold text-lg text-sci-green">Menu</span>
-        <button id="close-menu" class="text-3xl text-sci-green hover:text-sci-navy focus:text-sci-navy focus:outline-none focus-visible:ring-2 focus-visible:ring-sci-green rounded" aria-label="Close navigation menu">&times;</button>
+    <!-- Mobile Menu (with glassmorphism) -->
+    <div id="mobile-menu" class="fixed top-0 left-0 h-full w-64 bg-white/40 backdrop-blur-xl shadow-2xl border border-white/30 z-[60] transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col p-6 gap-4 md:hidden before:absolute before:inset-0 before:bg-gradient-to-b before:from-white/50 before:to-transparent before:-z-10">
+      <div class="flex justify-between items-center mb-4 relative">
+        <span class="font-bold text-lg text-sci-navy">Menu</span>
+        <button id="close-menu" class="text-3xl text-sci-navy hover:text-sci-green focus:text-sci-green focus:outline-none focus-visible:ring-2 focus-visible:ring-sci-green rounded" aria-label="Close navigation menu">&times;</button>
       </div>
       <a href="index.html" class="block py-2 font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200">Home</a>
       <a href="about.html" class="block py-2 font-semibold text-sci-navy hover:text-sci-green focus:text-sci-green transition-colors duration-200">About</a>
